@@ -1,2 +1,15 @@
-@import "result";
+@import "reset";
 
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: pink;
+}
+
+.sidebar {
+    grid-column: 1 / span 1;
+}
+
+main {
+    grid-column: 2 / span 2;
+}
