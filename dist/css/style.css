@@ -139,6 +139,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 100svh;
+  font-family: "Roboto", sans-serif;
 }
 
 .sidebar {
@@ -147,25 +148,76 @@ body {
   color: black;
   padding: 1rem;
 }
-.sidebar p {
+.sidebar li {
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: 1rem 1fr;
   gap: 1rem;
   margin-top: 1rem;
 }
 .sidebar h1 {
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: 1rem 1fr;
   gap: 1rem;
   margin-bottom: 3rem;
 }
 .sidebar i {
   justify-self: center;
 }
-.sidebar #settings {
+.sidebar .settings {
   margin-top: 3rem;
 }
 
 main {
   grid-column: 2/span 2;
+  display: grid;
+  grid-template-rows: minmax(100px, 1fr) 5fr;
+}
+main header {
+  display: grid;
+  grid-template: auto 1fr/3fr 2fr;
+  padding: 0.5rem 2rem;
+  background-color: rgb(255, 227, 232);
+}
+main header input {
+  border-radius: 1rem;
+  background-color: lightgrey;
+  border: none;
+  width: 100%;
+  height: 50%;
+}
+main header img {
+  border-radius: 50%;
+}
+main header .nav-bar, main header .user-name, main header .account-details, main header .buttons {
+  display: flex;
+  align-items: center;
+}
+main header .nav-bar {
+  gap: 0.5rem;
+}
+main header .account-details {
+  justify-content: center;
+  gap: 0.5rem;
+}
+main header .account-details img {
+  width: 2.5rem;
+}
+main header .user-name {
+  gap: 0.5rem;
+}
+main header .user-name img {
+  width: 4rem;
+}
+main header .buttons {
+  justify-content: center;
+  gap: 1rem;
+}
+main header .buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: pink;
+}
+main section {
+  background-color: lightgrey;
 }/*# sourceMappingURL=style.css.map */

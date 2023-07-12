@@ -10,83 +10,95 @@
       src="https://kit.fontawesome.com/28f50c9793.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Admin Dashboard</title>
   </head>
   <body>
-    <div class="sidebar">
+    <aside class="sidebar">
       <h1><i class="fa-solid fa-table-columns"></i>Dashboard</h1>
-      <p><i class="fa-solid fa-house"></i>Home</p>
-      <p><i class="fa-solid fa-user"></i>Profile</p>
-      <p><i class="fa-solid fa-message"></i>Messages</p>
-      <p><i class="fa-solid fa-clock"></i>History</p>
-      <p><i class="fa-solid fa-list-check"></i>Tasks</p>
-      <p><i class="fa-solid fa-user-group"></i>Communities</p>
-      <p id="settings"><i class="fa-solid fa-gear"></i>Setting</p>
-      <p><i class="fa-solid fa-question"></i>Support</p>
-      <p><i class="fa-solid fa-shield"></i>Privacy</p>
-    </div>
+      
+      <ul>
+        <li><i class="fa-solid fa-house"></i>Home</li>
+        <li><i class="fa-solid fa-user"></i>Profile</li>
+        <li><i class="fa-solid fa-message"></i>Messages</li>
+        <li><i class="fa-solid fa-clock"></i>History</li>
+        <li><i class="fa-solid fa-list-check"></i>Tasks</li>
+        <li><i class="fa-solid fa-user-group"></i>Communities</li>
+      </ul>
+
+      <ul class="settings">
+        <li><i class="fa-solid fa-gear"></i>Setting</li>
+        <li><i class="fa-solid fa-question"></i>Support</li>
+        <li><i class="fa-solid fa-shield"></i>Privacy</li>
+      </ul>
+    </aside>
 
     <main>
       <header>
-        <div class="header-top">
-          <div class="nav-bar">
-            <i>Mag Glass</i>
-            <input type="text" name="nav" id="nav" />
-          </div>
+        <div class="nav-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="nav" id="nav" />
+        </div>
 
-          <div class="account-details">
-            <i>Notifications</i>
-            <img src="" alt="Profile Picture" />
-            <p>Lexus Williams</p>
+        <div class="account-details">
+          <i class="fa-solid fa-bell"></i>
+          <img src="./img/lexus.jpg" alt="Profile Picture" />
+          <p>Lexus Williams</p>
+        </div>
+
+        <div class="user-name">
+          <img src="./img/lexus.jpg" alt="Profile Picture" />
+          <div class="user-welcome">
+            <p>Hi there,</p>
+            <p>Lexus Williams (@luxelex)</p>
           </div>
         </div>
-        <div class="header-bottom">
-          <div class="user-name">
-            <img src="" alt="Profile Picture" />
-            <div class="user-welcome">
-              <p>Hi there,</p>
-              <p>Lexus Williams (@luxelex)</p>
-            </div>
-          </div>
 
-          <div class="buttons">
-            <button class="new">New</button>
-            <button class="upload">Upload</button>
-            <button class="share">Share</button>
-          </div>
+        <div class="buttons">
+          <button class="new">New</button>
+          <button class="upload">Upload</button>
+          <button class="share">Share</button>
         </div>
       </header>
 
-      <div class="projects">
-        <h1>Your Projects</h1>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-      </div>
-
-      <div class="announcements">
-        <h1>Announcements</h1>
-        <div class="annoucement-thread">
-          <h1></h1>
-          <p></p>
-
-          <h1></h1>
-          <p></p>
-
-          <h1></h1>
-          <p></p>
+      <section>
+        <div class="projects">
+          <h1>Your Projects</h1>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
         </div>
-      </div>
 
-      <div class="trending">
-        <div class="user"></div>
-        <div class="user"></div>
-        <div class="user"></div>
-        <div class="user"></div>
-      </div>
+        <div class="announcements">
+          <h1>Announcements</h1>
+          <div class="annoucement-thread">
+            <h1></h1>
+            <p></p>
+
+            <h1></h1>
+            <p></p>
+
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="trending">
+          <div class="user"></div>
+          <div class="user"></div>
+          <div class="user"></div>
+          <div class="user"></div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
