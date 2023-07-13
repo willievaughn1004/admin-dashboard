@@ -1,8 +1,12 @@
 @import "reset";
 
+html {
+  font-size: calc(0.625rem + 0.4vw);
+}
+
 body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: auto 4fr;
   height: 100svh;
   font-family: "Roboto", sans-serif;
 }
@@ -10,15 +14,30 @@ body {
 .sidebar {
   grid-column: 1 / span 1;
 
+  height: 100%;
+
   background-color: pink;
   color: black;
   padding: 1rem;
+  font-weight: 500;
+
+  h1 {
+    font-size: 1.8rem;
+  }
 
   li {
     display: grid;
     grid-template-columns: 1rem 1fr;
     gap: 1rem;
-    margin-top: 1rem;
+
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 
   h1 {
@@ -45,63 +64,80 @@ main {
   header {
     display: grid;
     grid-template: auto 1fr / 3fr 2fr;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1.5rem;
 
     background-color: rgb(255, 227, 232);
 
     input {
-        border-radius: 1rem;
-        background-color: lightgrey;
-        border: none;
-        width: 100%;
-        height: 50%;
+      border-radius: 1rem;
+      background-color: white;
+      border: none;
+      width: 100%;
+      height: 50%;
     }
 
     img {
-        border-radius: 50%;
+      border-radius: 50%;
     }
 
-    .nav-bar, .user-name, .account-details, .buttons {
-        display: flex;
-        align-items: center;
+    .nav-bar,
+    .user-name,
+    .account-details,
+    .buttons {
+      display: flex;
+      align-items: center;
     }
 
     .nav-bar {
-        gap: 0.5rem;
+      gap: 1rem;
     }
 
     .account-details {
-        justify-content: center;
-        gap: 0.5rem;
-        
-        img {
-            width: 2.5rem;
-        }
+      justify-content: center;
+      gap: 1rem;
+
+      img {
+        width: 2.5rem;
+      }
+
+      p {
+        font-weight: 500;
+      }
     }
 
     .user-name {
-        gap: 0.5rem;
+      gap: 1rem;
 
-        img {
-            width: 4rem;
-        }
+      img {
+        width: 4rem;
+      }
+
+      p {
+        font-weight: 500;
+      }
+
+      .greeting {
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+      }
     }
 
     .buttons {
-        justify-content: center;
-        gap: 1rem;
+      justify-content: center;
+      gap: 1rem;
 
-        button {
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            border: none;
-            background-color: pink;
-        }
+      button {
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: pink;
+      }
     }
-
   }
 
   section {
-    background-color: lightgrey;
+    background-color: white;
   }
 }
