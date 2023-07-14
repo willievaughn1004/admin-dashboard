@@ -1,28 +1,30 @@
 @import "reset";
 
 html {
+  min-height: 100vh;
   font-size: calc(0.625rem + 0.4vw);
 }
 
 body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: auto 4fr;
-  height: 100svh;
+  //   grid-template-columns: auto 4fr;
+  //   grid-template-rows: minmax(150px, 1fr) 5fr;
   font-family: "Roboto", sans-serif;
+  grid-template: auto 4fr / 1fr 4fr;
 }
 
 .sidebar {
   grid-column: 1 / span 1;
-
-  height: 100%;
+  grid-row: 1 / span 2;
 
   background-color: pink;
   color: black;
-  padding: 1rem;
+  padding: 1.5rem;
   font-weight: 500;
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   li {
@@ -30,13 +32,15 @@ body {
     grid-template-columns: 1rem 1fr;
     gap: 1rem;
 
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-top: 1.5rem;
     cursor: pointer;
 
     a {
       text-decoration: none;
       color: black;
+      font-size: 1rem;
+      align-self: center;
     }
   }
 
@@ -56,88 +60,145 @@ body {
   }
 }
 
-main {
-  grid-column: 2 / span 2;
+header {
   display: grid;
-  grid-template-rows: minmax(100px, 1fr) 5fr;
+  grid-template: auto 1fr / 3fr 2fr;
+  padding: 0.5rem 1.5rem;
 
-  header {
-    display: grid;
-    grid-template: auto 1fr / 3fr 2fr;
-    padding: 0.5rem 1.5rem;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  background-color: rgb(255, 227, 232);
 
-    background-color: rgb(255, 227, 232);
+  input {
+    border-radius: 1rem;
+    background-color: white;
+    border: none;
+    width: 100%;
+    height: 50%;
+  }
 
-    input {
-      border-radius: 1rem;
-      background-color: white;
-      border: none;
-      width: 100%;
-      height: 50%;
-    }
+  img {
+    border-radius: 50%;
+  }
+
+  .nav-bar,
+  .user-name,
+  .account-details,
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-bar {
+    gap: 1rem;
+  }
+
+  .account-details {
+    justify-content: center;
+    gap: 1rem;
 
     img {
-      border-radius: 50%;
+      width: 3rem;
     }
 
-    .nav-bar,
-    .user-name,
-    .account-details,
-    .buttons {
-      display: flex;
-      align-items: center;
+    p {
+      font-weight: 500;
     }
 
-    .nav-bar {
-      gap: 1rem;
-    }
-
-    .account-details {
-      justify-content: center;
-      gap: 1rem;
-
-      img {
-        width: 2.5rem;
-      }
-
-      p {
-        font-weight: 500;
-      }
-    }
-
-    .user-name {
-      gap: 1rem;
-
-      img {
-        width: 4rem;
-      }
-
-      p {
-        font-weight: 500;
-      }
-
-      .greeting {
-        font-size: 0.8rem;
-        margin-bottom: 0.6rem;
-      }
-    }
-
-    .buttons {
-      justify-content: center;
-      gap: 1rem;
-
-      button {
-        font-size: 0.8rem;
-        font-weight: 600;
-        padding: 0.5rem 1.5rem;
-        border-radius: 1rem;
-        border: none;
-        background-color: pink;
-      }
+    i {
+      font-size: 1.5rem;
     }
   }
 
-  section {
+  .user-name {
+    gap: 1rem;
+
+    img {
+      width: 5rem;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .greeting {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: pink;
+    }
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1rem;
+  background-color: #e0f2fe;
+
+  .project-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem 1rem;
+
+    h1 {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .project {
+    padding: 1.5rem;
+    border-left: 1rem solid pink;
+    border-radius: 1rem;
     background-color: white;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+
+    max-height: 250px;
+
+
+    .description {
+        h1 {
+            font-size: 1.4rem;
+            font-weight: 500;
+          }
+
+        p {
+            max-width: 90;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .interaction {
+        font-size: 1.5rem;
+        justify-self: flex-end;
+        align-self: flex-end;
+        
+        i {
+            padding-left: 1rem;
+        }
+    }
+  }
+
+  .announcements,
+  .trending {
+    border: 2px solid black;
   }
 }
