@@ -146,7 +146,7 @@ header {
 section {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #e0f2fe;
 
   .project-section {
@@ -158,6 +158,9 @@ section {
 
     h1 {
       grid-column: 1 / -1;
+      margin-bottom: -1rem;
+      font-weight: 700;
+      font-size: 1.4rem;
     }
   }
 
@@ -172,33 +175,75 @@ section {
 
     max-height: 250px;
 
-
     .description {
-        h1 {
-            font-size: 1.4rem;
-            font-weight: 500;
-          }
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
 
-        p {
-            max-width: 90;
-            margin-top: 1rem;
-            line-height: 1.5rem;
-        }
+      p {
+        max-width: 90;
+        margin-top: 1rem;
+        line-height: 1.5rem;
+      }
     }
 
     .interaction {
-        font-size: 1.5rem;
-        justify-self: flex-end;
-        align-self: flex-end;
-        
-        i {
-            padding-left: 1rem;
-        }
+      font-size: 1.5rem;
+      justify-self: flex-end;
+      align-self: flex-end;
+
+      i {
+        padding-left: 1rem;
+      }
     }
   }
 
-  .announcements,
-  .trending {
-    border: 2px solid black;
+  .notifications {
+    margin-left: 1rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-auto-rows: 1fr;
+
+    h1 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .annoucement-thread {
+      margin-bottom: 1rem;
+      display: grid;
+      grid-auto-rows: 1fr auto 1fr auto 1fr;
+      justify-items: center;
+      align-items: center;
+      // text-align: center;
+
+      .announcement {
+        width: 80%;
+
+        h1 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .border {
+        border: 1px solid lightgray;
+        width: 80%;
+        border-radius: 2rem;
+    }
+
+    .annoucement-thread,
+    .trending {
+      background-color: white;
+      border-radius: 1.5rem;
+    }
   }
 }
