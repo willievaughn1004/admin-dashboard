@@ -285,26 +285,26 @@ main {
   align-items: center;
   justify-items: center;
   min-width: 14rem;
-}
 
-.user {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 2rem;
+  .user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
 
-  img {
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-  }
+    img {
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
 
-  div {
-    align-self: center;
-    justify-self: center;
-  }
+    div {
+      align-self: center;
+      justify-self: center;
+    }
 
-  p {
-    margin-top: 0.4rem;
-    color: rgb(135, 135, 135);
+    p {
+      margin-top: 0.4rem;
+      color: rgb(135, 135, 135);
+    }
   }
 }
