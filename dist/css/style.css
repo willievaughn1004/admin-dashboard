@@ -321,7 +321,6 @@ main .notifications {
   grid-template-rows: auto 1fr auto;
   grid-auto-rows: 1fr;
   margin-left: 1rem;
-  min-width: 12.5rem;
 }
 main .notifications h1 {
   margin-bottom: 1rem;
@@ -353,4 +352,31 @@ main .notifications .annoucement-thread,
 main .notifications .trending {
   background-color: #fff;
   border-radius: 1.5rem;
+}
+
+.trending {
+  display: grid;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  min-width: 14rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
+}
+.user img {
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.user div {
+  align-self: center;
+  justify-self: center;
+}
+.user p {
+  margin-top: 0.4rem;
+  color: rgb(135, 135, 135);
 }/*# sourceMappingURL=style.css.map */
